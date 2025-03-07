@@ -10,7 +10,7 @@ const app = new Elysia()
 	.use(avatars)
 	.use(beatmaps)
 	.use(beatmapsets)
-	.listen(3000);
+	.listen(1812);
 
 console.log(
 	`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`,
