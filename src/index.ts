@@ -5,6 +5,7 @@ import users from "./users";
 import beatmaps from "./beatmaps";
 import beatmapsets from "./beatmapsets";
 import avatars from "./avatars";
+import resCup from "./resCup";
 
 const app = new Elysia()
 	.use(cors())
@@ -13,6 +14,7 @@ const app = new Elysia()
 	.use(avatars)
 	.use(beatmaps)
 	.use(beatmapsets)
+	.use(resCup)
 	.listen(23456);
 
 console.log(
