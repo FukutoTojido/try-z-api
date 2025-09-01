@@ -6,6 +6,7 @@ import beatmaps from "./beatmaps";
 import beatmapsets from "./beatmapsets";
 import avatars from "./avatars";
 import resCup from "./resCup";
+import vnoc from "./vnoc";
 
 const app = new Elysia()
 	.use(cors())
@@ -15,6 +16,7 @@ const app = new Elysia()
 	.use(beatmaps)
 	.use(beatmapsets)
 	.use(resCup)
+	.use(vnoc)
 	.listen(23456);
 
 console.log(
