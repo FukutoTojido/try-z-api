@@ -5,6 +5,8 @@ const getSchedules = new Elysia().get(
 	"/schedules/:id",
 	async ({ params: { id }, error }) => {
 		try {
+			return [];
+			
 			const { data } = await axios.get(
 				`https://vnoc.hoaq.works/api/round/${id}/matchups`,
 			);
