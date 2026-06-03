@@ -63,7 +63,7 @@ const getSchedules = new Elysia().get(
 				({ id, time, scoreRed, scoreBlue, red, blue }) => {
 					return {
 						id,
-						date: time,
+						date: time ?? 0,
 						player: {
 							red: teams.find((team) => team.name === red) ?? {
 								...placeholder,
