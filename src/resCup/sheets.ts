@@ -19,3 +19,5 @@ export const getSheetData = async (name: string) => {
 		return null;
 	}
 };
+
+export { sheets }
