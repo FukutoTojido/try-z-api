@@ -3,12 +3,13 @@ import { readTeamFromSheet } from "./getTeams";
 import { getSheetData } from "./sheets";
 
 const ROUNDS_MAP = {
-	0: "Round of 32",
-	1: "Round of 16",
-	2: "Quarterfinals",
-	3: "Semifinals",
-	4: "Finals",
-	5: "Grand Finals",
+	0: "Swiss Stage 1",
+	1: "Swiss Stage 2",
+	2: "Swiss Stage 3",
+	3: "Quarterfinals",
+	4: "Semifinals",
+	5: "Finals",
+	6: "Grand Finals",
 };
 
 const placeholder = {
@@ -26,7 +27,7 @@ const getSchedules = new Elysia().get(
 			const roundName =
 				id > 5 || id < 0
 					? ROUNDS_MAP[0]
-					: ROUNDS_MAP[id as 0 | 1 | 2 | 3 | 4 | 5];
+					: ROUNDS_MAP[id as 0 | 1 | 2 | 3 | 4 | 5 | 6];
 
 			const { teams } = (await readTeamFromSheet()) ?? { teams: [] };
 
