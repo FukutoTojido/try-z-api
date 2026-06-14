@@ -6,10 +6,12 @@ const ROUNDS_MAP = {
 	0: "Swiss Stage 1",
 	1: "Swiss Stage 2",
 	2: "Swiss Stage 3",
-	3: "Quarterfinals",
-	4: "Semifinals",
-	5: "Finals",
-	6: "Grand Finals",
+	3: "Swiss Stage 4",
+	4: "Swiss Stage 5",
+	5: "Quarterfinals",
+	6: "Semifinals",
+	7: "Finals",
+	8: "Grand Finals",
 };
 
 const placeholder = {
@@ -27,7 +29,7 @@ const getSchedules = new Elysia().get(
 			const roundName =
 				id > 5 || id < 0
 					? ROUNDS_MAP[0]
-					: ROUNDS_MAP[id as 0 | 1 | 2 | 3 | 4 | 5 | 6];
+					: ROUNDS_MAP[id as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8];
 
 			const { teams } = (await readTeamFromSheet()) ?? { teams: [] };
 
