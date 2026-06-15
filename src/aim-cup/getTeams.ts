@@ -17,12 +17,12 @@ export const readTeamFromSheet = async () => {
 
 	const [_, ...raw] = values;
 	const data = raw.map(
-		([seed, name, acronym, avatarURL, p1, p2, p3, p4, p5]) => {
+		([seed, name, acronym, avatarURL, p1, p2, p3, p4, p5, p6, p7, p8]) => {
 			return {
 				name,
 				id: acronym,
 				avatarURL,
-				members: [p1, p2, p3, p4, p5].filter((p) => p),
+				members: [p1, p2, p3, p4, p5, p6, p7, p8].filter((p) => p),
 				seed: seed || 0,
 			};
 		},
